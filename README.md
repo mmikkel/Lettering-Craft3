@@ -2,8 +2,6 @@
 
 Like Lettering.js, but in Twig
 
-![Screenshot](resources/img/plugin-logo.png)
-
 ## Requirements
 
 This plugin requires Craft CMS 3.0.0-beta.23 or later.
