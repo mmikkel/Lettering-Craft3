@@ -1,6 +1,6 @@
 # Lettering plugin for Craft CMS 3.x
 
-Like Lettering.js, but in Twig
+Like [Lettering.js](http://letteringjs.com/), but in Twig
 
 ## Requirements
 
@@ -56,6 +56,7 @@ Output:
 {% set text %}
     <p>Foo bar baz</p>
 {% endset %}
+
 {{ text|lettering('words') }}  
 ```
 
@@ -75,6 +76,7 @@ Output:
     <p>Foo
         bar baz</p>
 {% endset %}
+
 {{ text|lettering('lines') }}  
 ```
 
