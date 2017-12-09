@@ -29,7 +29,7 @@ Looking for the Craft 2 version? [It's right here!](https://github.com/sjelfull/
 ## Using Lettering
 
 ### Split on characters
-```kinja
+```jinja
 {% set text %}
     <p>Foo bar</p>
 {% endset %}
@@ -52,7 +52,7 @@ Output:
 
 ### Split on words
 
-```kinja
+```jinja
 {% set text %}
     <p>Foo bar baz</p>
 {% endset %}
@@ -71,7 +71,7 @@ Output:
 
 ### Split on lines
 
-```kinja
+```jinja
 {% set text %}
     <p>Foo
         bar baz</p>
@@ -90,7 +90,7 @@ Output:
 
 ### Tag pair usage
 
-```kinja
+```jinja
 {% filter lettering('words') %}  
     <h1>{{ entry.title }}</h1>  
 {% endfilter %}
@@ -98,7 +98,7 @@ Output:
 
 ### Extract aria label and chars/words/lines
 
-```kinja
+```jinja
 {% set lettering = craft.lettering.chars('Sanctimonious Variable Lettering') %}  
 
 <h1 {{ lettering.ariaLabel }}>{{ lettering.chars }}</h1>
