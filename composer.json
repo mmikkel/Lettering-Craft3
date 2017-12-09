@@ -1,0 +1,47 @@
+{
+    "name": "mmikkel/lettering",
+    "description": "Like Lettering.js, but in Twig",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "lettering"
+    ],
+    "support": {
+        "docs": "https://github.com/mmikkel/lettering/blob/master/README.md",
+        "issues": "https://github.com/mmikkel/lettering/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mats Mikkel Rummelhoff",
+            "homepage": "https://vaersaagod.no"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "mmikkel\\lettering\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Lettering",
+        "handle": "lettering",
+        "schemaVersion": "1.0.0",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/mmikkel/lettering/master/CHANGELOG.md",
+        "class": "mmikkel\\lettering\\Lettering"
+    }
+}
