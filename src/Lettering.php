@@ -8,11 +8,6 @@
  * @copyright Copyright (c) 2017 Mats Mikkel Rummelhoff
  */
 
-/*
- * Plugin icon: Underline by Hello Many from the Noun Project
- * https://thenounproject.com
- */
-
 namespace mmikkel\lettering;
 
 use mmikkel\lettering\twigextensions\LetteringTwigExtension;

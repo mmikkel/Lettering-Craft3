@@ -113,3 +113,5 @@ Please report any bugs, feature requests or other issues [here](https://github.c
 **Pull requests are extremely welcome**
 
 Brought to you by [Fred Carlsen](http://sjelfull.no) + [Mats Mikkel Rummelhoff](https://vaersaagod.no)
+
+Plugin icon: L shape by Lluisa Iborra from [the Noun Project](https://thenounproject.com)

@@ -2,13 +2,14 @@
     "name": "mmikkel/lettering",
     "description": "Like Lettering.js, but in Twig",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": [
         "craft",
         "cms",
         "craftcms",
         "craft-plugin",
-        "lettering"
+        "lettering",
+        "lettering-js"
     ],
     "support": {
         "docs": "https://github.com/mmikkel/lettering/blob/master/README.md",
