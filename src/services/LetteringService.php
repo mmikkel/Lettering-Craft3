@@ -49,6 +49,8 @@ class LetteringService extends Component
      */
     protected function injector($text, $class = 'chars', $after = '') {
 
+        $text = \trim($text);
+
         switch ($class) {
             case 'words' :
                 $parts = StringHelper::splitOnWords(StringHelper::stripHtml($text));
@@ -64,10 +66,10 @@ class LetteringService extends Component
         $count = 1;
 
         $formattedParts = array_map(function($part) use (&$count, $class, $after) {
-            $part = '<span class="'.substr($class, 0, -1) . $count . '" aria-hidden="true">' . ($part != ' ' ? trim($part) : $part) . '</span>' . $after;
+            $part = '<span class="'.substr($class, 0, -1) . $count . '" aria-hidden="true">' . $part . '</span>' . $after;
             $count = $count + 1;
             return $part;
-        }, $parts);
+        }, \array_filter($parts));
 
         $ariaLabel = Template::raw(' aria-label="'. StringHelper::collapseWhitespace(trim(strip_tags($text))) .'"');
         $joined = Template::raw( implode('', $formattedParts) );
