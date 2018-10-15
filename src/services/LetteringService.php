@@ -69,7 +69,7 @@ class LetteringService extends Component
             $part = '<span class="'.substr($class, 0, -1) . $count . '" aria-hidden="true">' . $part . '</span>' . $after;
             $count = $count + 1;
             return $part;
-        }, \array_filter($parts));
+        }, \array_filter($parts, 'strlen'));
 
         $ariaLabel = Template::raw(' aria-label="'. StringHelper::collapseWhitespace(trim(strip_tags($text))) .'"');
         $joined = Template::raw( implode('', $formattedParts) );
