@@ -2,7 +2,7 @@
     "name": "mmikkel/lettering",
     "description": "Like Lettering.js, but in Twig",
     "type": "craft-plugin",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "keywords": [
         "craft",
         "cms",
