@@ -13,6 +13,7 @@ namespace mmikkel\lettering\services;
 use craft\base\Component;
 use craft\helpers\Template;
 use craft\helpers\StringHelper;
+use craft\helpers\ArrayHelper;
 
 class LetteringService extends Component
 {
@@ -53,7 +54,7 @@ class LetteringService extends Component
 
         switch ($class) {
             case 'words' :
-                $parts = StringHelper::splitOnWords(StringHelper::stripHtml($text));
+                $parts = $this->_splitWords(StringHelper::stripHtml($text));
                 break;
             case 'lines' :
                 $parts = StringHelper::lines(StringHelper::stripHtml($text));
@@ -81,5 +82,18 @@ class LetteringService extends Component
         ];
 
         return $result;
+    }
+	 
+    /**
+     * Overriding the splitWords function from StringHelper
+     * @param $str
+     * @return array
+     */
+    private function _splitWords($str): array {
+        // Split on any character or punctuation
+        // Reference: http://www.regular-expressions.info/unicode.html
+        preg_match_all('/[^\p{Z}]+/u', $str, $matches);
+
+        return ArrayHelper::filterEmptyStringsFromArray($matches[0]);
     }
 }
